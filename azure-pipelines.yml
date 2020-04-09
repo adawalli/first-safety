@@ -13,3 +13,8 @@ steps:
 - script: |
     python setup.py install
   displayName: 'Install "First-Safety" Package'
+
+- script: |
+    pip install safety
+    safety check --full-report
+  displayName: 'Safety is #1 Priority'
